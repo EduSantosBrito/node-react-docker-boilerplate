@@ -1,12 +1,24 @@
 {
-  "name": "node-react-boilerplate",
-  "version": "1.0.0",
-  "description": "",
+  "name": "node-react-docker-boilerplate",
+  "version": "0.1.0",
+  "description": "A pretty simple boilerplate using Typescript, React and Docker",
+  "author": "Eduardo Santos de Brito",
+  "license": "MIT",
+  "homepage": "https://github.com/EduSantosBrito/node-react-docker-boilerplate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EduSantosBrito/node-react-docker-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/EduSantosBrito/node-react-docker-boilerplate/issues"
+  },
+  "engines": {
+    "npm": ">=6.10.3",
+    "node": ">=12.10.0"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": []
 }

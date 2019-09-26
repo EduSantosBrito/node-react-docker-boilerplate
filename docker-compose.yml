@@ -1,7 +1,7 @@
 version: "3"
 services: 
-  node-react-boilerplate-client:
-    container_name: node-react-boilerplate-client
+  node-react-docker-boilerplate-client:
+    container_name: node-react-docker-boilerplate-client
     build: 
       context: ./client
       dockerfile: Dockerfile
@@ -15,13 +15,11 @@ services:
     ports:
       - "50100:80"
     depends_on:
-      - node-react-boilerplate-server
+      - node-react-docker-boilerplate-server
     networks:
-      - node-react-boilerplate-network
-    volumes:
-      - ./client:/usr/src/app
-  node-react-boilerplate-server: 
-    container_name: node-react-boilerplate-server
+      - node-react-docker-boilerplate-network
+  node-react-docker-boilerplate-server: 
+    container_name: node-react-docker-boilerplate-server
     build: 
       context: ./server
       dockerfile: Dockerfile
@@ -31,18 +29,16 @@ services:
       NODE_PORT: 3001
       NODE_HOST: 0.0.0.0
       MONGODB_PORT: 27017
-      MONGODB_HOST: node-react-boilerplate-mongo
-      MONGODB_DATABASE: node-react-boilerplate-database
+      MONGODB_HOST: node-react-docker-boilerplate-mongo
+      MONGODB_DATABASE: node-react-docker-boilerplate-database
     ports: 
       - "50110:3001"
     depends_on:
-      - node-react-boilerplate-mongo
+      - node-react-docker-boilerplate-mongo
     networks:
-      - node-react-boilerplate-network
-    volumes:
-      - ./server:/usr/src/server
-  node-react-boilerplate-mongo: 
-    container_name: node-react-boilerplate-mongo
+      - node-react-docker-boilerplate-network
+  node-react-docker-boilerplate-mongo: 
+    container_name: node-react-docker-boilerplate-mongo
     image: mongo
     restart: always
     environment:
@@ -53,8 +49,8 @@ services:
     ports: 
       - "50120:27017"
     networks:
-      - node-react-boilerplate-network
+      - node-react-docker-boilerplate-network
 
 networks: 
-  node-react-boilerplate-network:
+  node-react-docker-boilerplate-network:
     driver: bridge
