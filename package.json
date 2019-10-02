@@ -18,7 +18,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "generate-changelog": "auto-changelog -p"
   },
   "keywords": [],
   "dependencies": {
