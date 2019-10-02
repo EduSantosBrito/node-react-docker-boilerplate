@@ -20,5 +20,8 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "auto-changelog": "^1.16.1"
+  }
 }
